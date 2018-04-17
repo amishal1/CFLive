@@ -28,9 +28,9 @@ export class NewAppointmentPage implements AfterViewInit {
       //this.someInput.nativeElement.value = "Anchovies! 🍕🍕";
     }
 
-    addNewPill(){
+    addNewAppointment(){
 
-      let testingVar;
+      //let testingVar;
       //testingVar = this.testingInput.nativeElement.value;
       //alert(testingVar);
       //localStorage.setItem('testingKey', testingVar);
@@ -46,6 +46,7 @@ export class NewAppointmentPage implements AfterViewInit {
 
       localStorage.setItem('appointment', JSON.stringify(appointmentObj) );
       console.log(JSON.stringify(appointmentObj));
+
 
     }
   

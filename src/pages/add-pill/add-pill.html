@@ -8,24 +8,19 @@
 <ion-content padding id="page6" style="background-color:#6A586B;">
   <form id="addPill-form2">
     <ion-item id="addPill-input3">
-      <input  label="PillName" type="text" padding id="page4" placeholder="Name" >
+      <input #pillName label="PillName" type="text" padding id="page4" placeholder="Name" >
     </ion-item>
     <ion-item id="addPill-select1">
       <label>
         Daily Dosage
       </label>
-      <select  label="Daily dosage" padding id="page4" placeholder="Date"> 
+      <select #dosage label="Daily dosage" padding id="page4" placeholder="Date"> 
       <option>Once</option><option>Twice</option><option>Thrice</option> 
       </select>  
     </ion-item>
-    <ion-item id="addPill-toggle2">
-      <label>
-          Notification
-        </label>
-      <input  label="Notification" type="toggle"  >
-    </ion-item>
+
   </form>
-  <button id="addPill-button10" ion-button color="dark" block>
+  <button id="addPill-button10" ion-button color="dark" bloc on-click="addNewPill()">
     Add
   </button>
 </ion-content>

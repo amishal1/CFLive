@@ -10,19 +10,13 @@
     <ion-list>
       <form id="weightControl-form3">
         <ion-item id="weightControl-input4">
-          <ion-label>
-            Height (cm)
-          </ion-label>
-          <ion-input type="number" placeholder=""></ion-input>
+            <input #weight label="PillName" type="number" padding id="page4" placeholder="Weight(kg)" >
         </ion-item>
-        <ion-item id="weightControl-input5">
-          <ion-label>
-            Weight (Kg)
-          </ion-label>
-          <ion-input type="number" placeholder=""></ion-input>
+        <ion-item id="weightControl-input5">         
+            <input #height label="PillName" type="number" padding id="page4" placeholder="Height(cm)" >
         </ion-item>
       </form>
-      <button id="weightControl-button11" ion-button color="dark" block>
+      <button id="weightControl-button11" ion-button color="dark" block on-click="addBMI()">
         Add
       </button>
       <button id="weightControl-button12" ion-button color="dark" block on-click="goToDietTips()">
