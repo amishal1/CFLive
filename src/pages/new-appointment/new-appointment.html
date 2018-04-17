@@ -6,26 +6,17 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page4" style="background-color:#6A586B;">
-  <form id="newAppointment-form1"> <input type='text' id='test'>
-    <input #someInput placeholder="Your favorite pizza toping">
-    <input #testingInput >
+  <form id="newAppointment-form1"> 
+
+    
+    
     <ion-item id="inputDoctorName">
-      <ion-label>
-        Doctor
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+
+      <input #doctorName label="Doctor" type="text" padding id="page4" placeholder="Doctor" >
     </ion-item>
     <ion-item id="inputAppointmentDate">
-      <ion-label>
-        Date
-      </ion-label>
-      <ion-input type="date" placeholder=""></ion-input>
-    </ion-item>
-    <ion-item id="inputAppointmentNotification">
-      <ion-label>
-        Notification
-      </ion-label>
-      <ion-toggle color="positive" checked="false"></ion-toggle>
+
+      <input #appointmentDate label="Date" type="date" padding id="page4" placeholder="Date" >
     </ion-item>
   </form>
   <button id="newAppointment-button8" ion-button color="dark" block on-click="addNewPill()" >
