@@ -1,6 +1,7 @@
 import { Component, ViewChild,
   ElementRef  } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { CFLivePage } from '../c-flive/c-flive';
 
 @Component({
   selector: 'page-add-pill',
@@ -9,6 +10,11 @@ import { NavController } from 'ionic-angular';
 export class AddPillPage {
 
   constructor(public navCtrl: NavController) {
+  }
+
+  goToCFLivePage(params){
+    if (!params) params = {};
+    this.navCtrl.push(CFLivePage);
   }
 
   @ViewChild('pillName') pillName: ElementRef;
@@ -26,6 +32,8 @@ export class AddPillPage {
 
       localStorage.setItem('pill', JSON.stringify(pillObj) );
       console.log(JSON.stringify(pillObj));
+
+      this.goToCFLivePage(AddPillPage);
 
   }
   

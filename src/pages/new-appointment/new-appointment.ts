@@ -1,7 +1,7 @@
 import { Component, ViewChild, AfterViewInit,
   ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
-//import { VariableAst } from '@angular/compiler';
+import { CFLivePage } from '../c-flive/c-flive';
 
 
 
@@ -14,7 +14,11 @@ export class NewAppointmentPage implements AfterViewInit {
   constructor(public navCtrl: NavController) {
   }
 
- 
+  goToCFLivePage(params){
+    if (!params) params = {};
+    this.navCtrl.push(CFLivePage);
+  }
+
 
 
     //@ViewChild('someInput') someInput: ElementRef;
@@ -46,6 +50,8 @@ export class NewAppointmentPage implements AfterViewInit {
 
       localStorage.setItem('appointment', JSON.stringify(appointmentObj) );
       console.log(JSON.stringify(appointmentObj));
+
+      this.goToCFLivePage(NewAppointmentPage);
 
 
     }

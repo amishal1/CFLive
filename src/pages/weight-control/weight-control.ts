@@ -2,6 +2,7 @@ import { Component, ViewChild,
   ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DietTipsPage } from '../diet-tips/diet-tips';
+import { CFLivePage } from '../c-flive/c-flive';
 
 @Component({
   selector: 'page-weight-control',
@@ -10,6 +11,11 @@ import { DietTipsPage } from '../diet-tips/diet-tips';
 export class WeightControlPage {
 
   constructor(public navCtrl: NavController) {
+  }
+
+  goToCFLivePage(params){
+    if (!params) params = {};
+    this.navCtrl.push(CFLivePage);
   }
 
   @ViewChild('height') height: ElementRef;
@@ -33,6 +39,8 @@ export class WeightControlPage {
 
       localStorage.setItem('bmi', JSON.stringify(BMIObj) );
       console.log(JSON.stringify(BMIObj));
+
+      this.goToCFLivePage(WeightControlPage);
 
   }
 }
